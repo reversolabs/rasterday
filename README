@@ -1,0 +1,9 @@
+The short answer is to put this in your config.ru so that it can intercept SVG
+images that come back from anything deeper in the stack (e.g., your application,
+or Rack::Static, or similar).
+
+See doc/examples for example usage.  If you figure out how to use it with Rails,
+I'd be interested in an example.
+
+See doc/TODO for what the author intends to do.  See doc/LICENSE for licensing
+information.

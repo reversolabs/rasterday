@@ -1,0 +1,16 @@
+This is a first draft.  Consider it beta.
+
+Integrate the ua_tokenizer gem.  JCasts doesn't seem to have pushed it to rubygems!
+
+Implement some caching mechanism.  I think the memcached interface is the most
+practical, especially since TokyoTyrant uses the same interface.  We'll want to
+use a hash (SHA1 is probably good enough here) so that an in-memory hash need not
+hold every SVG we've ever received in memory.
+
+Add more information to Rasterday#bad_browsers.  Right now, any IE and <4.0
+Firefox are the only ones we recognize.
+
+Add a couple more examples.  Watts, Gin, and maybe Sinatra or something.
+
+Possibly add hooks for using, e.g., librsvg or another SVG renderer instead of
+RMagick.

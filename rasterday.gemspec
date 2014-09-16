@@ -2,7 +2,7 @@ Gem::Specification.new { |s|
 	s.platform = Gem::Platform::RUBY
 
 	s.author = "Pete Elmore"
-	s.email = "pete@debu.gs"
+	s.email = "pete@reverso.be"
 	s.files = Dir["{lib,doc,bin,ext}/**/*"].delete_if {|f|
 		/\/rdoc(\/|$)/i.match f
 	} + %w(Rakefile)
@@ -12,10 +12,13 @@ Gem::Specification.new { |s|
 	s.extensions << 'ext/extconf.rb' if File.exist? 'ext/extconf.rb'
 	Dir['bin/*'].map(&File.method(:basename)).map(&s.executables.method(:<<))
 
-	s.name = 'noname'
-	s.summary = "No summary yet."
-	s.homepage = "http://github.com/pete/#{s.name}"
-	%w().each &s.method(:add_dependency)
-	s.version = '0.0.0'
+	s.name = 'rasterday'
+	s.summary = "Rack middleware to convert SVGs to raster images"
+	s.homepage = "http://github.com/reversolabs/#{s.name}"
+	%w(
+		rmagick
+		rack
+	).each &s.method(:add_dependency)
+	s.version = '0.1.0'
 }
 
