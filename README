@@ -1,4 +1,9 @@
-The short answer is to put this in your config.ru so that it can intercept SVG
+Rasterday is a piece of Rack middleware to let you use SVGs transparently, even
+in the face of browsers that hate SVGs.  It does this by conditionally
+translating your application's SVG images to GIFs or PNGs when it thinks the
+browser won't handle the SVG properly, or on a trigger you specify.
+
+The short version is to put this in your config.ru so that it can intercept SVG
 images that come back from anything deeper in the stack (e.g., your application,
 or Rack::Static, or similar).
 

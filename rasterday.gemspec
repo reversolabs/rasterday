@@ -21,4 +21,3 @@ Gem::Specification.new { |s|
 	).each &s.method(:add_dependency)
 	s.version = '0.1.0'
 }
-
