@@ -94,7 +94,7 @@ class Rasterday
 	def bad_browsers(env, *)
 		ua = env['HTTP_USER_AGENT']
 		# IE hates SVGs:
-		return true if ua.include?('MSIE')
+		return true if ua.include?('MSIE') || ua.include?('Trident/')
 		# Older versions of Firefox:
 		ff = /Firefox\/(\d+(\.\d+))/.match(ua)
 		if ff != nil
