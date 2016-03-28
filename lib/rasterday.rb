@@ -1,4 +1,4 @@
-require 'RMagick'
+require 'rmagick'
 require 'logger'
 
 # Rasterday is a piece of Rack Middleware that automatically converts SVG images
