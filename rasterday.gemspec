@@ -19,5 +19,5 @@ Gem::Specification.new { |s|
 		rmagick
 		rack
 	).each &s.method(:add_dependency)
-	s.version = '0.1.1'
+	s.version = '0.1.2'
 }
